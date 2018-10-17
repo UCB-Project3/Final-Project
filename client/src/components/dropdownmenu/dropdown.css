@@ -28,17 +28,17 @@
      border-bottom: none;
 }
  li:hover {
-     background-color: #e5e5e5;
+     background-color: lightblue;
      color: white;
 }
  .button{
      width:178px;
      height:18px;
-     background-color:#ff3232 ;
+     background-color: #e5e5e5;
      padding:12px;
      border-radius:5px;
      font-weight:bold;
-     color:white;
+     color:black;
 }
  .button:before{
      content:"";

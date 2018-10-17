@@ -1,12 +1,18 @@
 import React from "react";
 import Dropdown from "../dropdownmenu/Dropdown";
+import SearchBtn from "../SearchBtn/SearchBtn";
+import './Nav.css'
 
 const Nav = () => (
-  <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a className="navbar-brand" href="/">
-      React Reading List
-      <Dropdown />
-    </a>
+  <nav className="navbar">
+    <div className="navbar-brand">
+      <div className="srchdiv">
+        <SearchBtn />
+      </div>
+      <div className="dropdowndiv">
+        <Dropdown />
+      </div>
+    </div>
   </nav>
 );
 
