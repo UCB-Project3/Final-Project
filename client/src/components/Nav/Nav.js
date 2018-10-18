@@ -4,16 +4,18 @@ import SearchBtn from "../SearchBtn/SearchBtn";
 import './Nav.css'
 
 const Nav = () => (
-  <nav className="navbar">
-    <div className="navbar-brand">
-      <div className="srchdiv">
-        <SearchBtn />
+  <div className="navigation-container">
+    <nav className="navbar">
+      <div className="navbar-brand">
+        <div className="srchdiv">
+          <SearchBtn />
+        </div>
+        <div className="dropdowndiv">
+          <Dropdown />
+        </div>
       </div>
-      <div className="dropdowndiv">
-        <Dropdown />
-      </div>
-    </div>
-  </nav>
+    </nav>
+  </div >
 );
 
 export default Nav;
