@@ -2,6 +2,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import Jumbotron from "../../components/Jumbotron";
+import Banner from "../../components/banner"
 //import DeleteBtn from "../../components/DeleteBtn";
 //import API from "../../utils/API";
 import { Col, Row, Container } from "../../components/Grid";
@@ -68,6 +69,7 @@ class Books extends Component {
                 <Row>
                     <Col size="md-6">
                         <Jumbotron>
+                            <Banner />
                             <h1>What Books Should I Read?</h1>
                         </Jumbotron>
                         <form>
