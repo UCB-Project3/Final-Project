@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 //import Login from "./pages/Login";
@@ -8,35 +9,18 @@ import Wrapper from "./components/Wrapper";
 import Nav from "./components/Nav";
 //import Title from "./components/Title";
 
+
+
 //import logo from './logo.svg';
 import './App.css';
 
-//class App extends Component {
-// render() {
-//  return (
-//   <div className="App">
-//    <header className="App-header">
-//      <img src={logo} className="App-logo" alt="logo" />
-//      <p>
-//        Edit <code>src/App.js</code> and save to reload.
-//      </p>
-//      <a
-//        className="App-link"
-//        href="https://reactjs.org"
-//       target="_blank"
-//       rel="noopener noreferrer"
-//     >
-//       Learn React
-//     </a>
-//    </header>
-//  </div>
-// );
-// }
-//}
-// <Route component={NoMatch} />
+
+// will USE these three Routes when LOGIN,SEARCH and Profile pages get ready
 //<Route exact path="/login" component={Login} />
 //<Route exact path="/search" component={Search} />
 //<Route exact path="/profile" component={Profile} />
+
+// <Route component={NoMatch} />
 
 
 const App = () => (
@@ -46,6 +30,7 @@ const App = () => (
         <Nav />
         <Switch>
           <Route exact path="/" component={Homepage} />
+
 
         </Switch>
       </div>
