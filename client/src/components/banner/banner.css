@@ -1,0 +1,10 @@
+.welcome-premium-banner {
+    background: url('/assets/img/Welcomepic.jpg') no-repeat;
+    height: 300px;
+}
+.welcome-premium-banner__header {
+    text-shadow: 1px 1px 2px white;
+    font-size: 50px;
+    position: relative;
+    top: 50px;
+}
