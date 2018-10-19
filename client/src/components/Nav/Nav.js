@@ -11,14 +11,19 @@ class Nav extends Component {
   }
 
   searchJSON = () => {
-    const term = this.state.searchTerm;
+    const term = this.state.searchTerm.toLowerCase();
+
+    let newResults = [];
 
     products.forEach(product => {
-      if (product.name.indexOf(term) > -1 || product.category.indexOf(term) > -1 || product.product_type.indexOf(term) > -1) {
-        results.push(product);
+      if (product.name.toLowerCase().indexOf(term) > -1 || product.category.toLowerCase().indexOf(term) > -1 || product.product_type.toLowerCase().indexOf(term) > -1) {
+        newResults.push(product);
       }
     })
 
+    this.setState({
+      results: newResults
+    });
 
   }
 
