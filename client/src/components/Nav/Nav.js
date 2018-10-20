@@ -5,34 +5,7 @@ import './Nav.css'
 import products from '../../data/products.json';
 
 class Nav extends Component {
-  state = {
-    searchTerm: "",
-    results: []
-  }
 
-  searchJSON = () => {
-    const term = this.state.searchTerm.toLowerCase();
-
-    let newResults = [];
-
-    products.forEach(product => {
-      if (product.name.toLowerCase().indexOf(term) > -1 || product.category.toLowerCase().indexOf(term) > -1 || product.product_type.toLowerCase().indexOf(term) > -1) {
-        newResults.push(product);
-      }
-    })
-
-    this.setState({
-      results: newResults
-    });
-
-  }
-
-  handleFormSubmit = event => {
-    event.preventDefault();
-
-    this.searchJSON();
-
-  }
 
   render() {
     return (
