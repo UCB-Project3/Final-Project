@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import SearchResult from "../../components/SearchResult";
+import Wrapper from "../../components/Wrapper";
 
 class Search extends Component {
     state = {
-        results
+        results: []
     };
 
     render() {
