@@ -4,26 +4,25 @@
 
   }
   */
-.navigation-container{
-  background-color: white;
-  margin-top: 2px;
-  margin-left: 10px;
-  margin-right: 10px;
-  border-width: 3;
-  border-style: solid;
-  float:center;
-  padding-left: 70 px;
-  width: 1600px;
-  height: 100px;
-}
-  .srchdiv {
-    margin-left: 100px;
-    float: right;
-  
+  .navbar{
+    background-color: lightgray;
+    margin-top: 2px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-width: 3;
+    border-style: solid;
+    float:center;
+    padding-left: 70 px;
+    height: 100px;
+  }
+    .srchdiv {
+      margin-left: 100px;
+      float: right;
     
-  }
-  .dropdowndiv{
-    top: 20px;
-    margin-left: 200px;
-    float: left;
-  }
+      
+    }
+    .dropdowndiv{
+      top: 20px;
+      margin-left: 200px;
+      float: left;
+    }

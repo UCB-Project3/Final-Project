@@ -60,6 +60,7 @@ class SearchBtn extends Component {
         <div className="navigationItem__navigationItem">
           <div className="navigationItem__labelContainer">
             <form className="searchForm" onSubmit={this.handleFormSubmit} /* {...props} */>
+              <i class="fas fa-search" style={{ position: "relative", marginLeft: 5 }}></i>
               <input onChange={this.handleInputChange} name="searchTerm" className="searchBar__searchInput--2aCeZ" placeholder="Let’s find what you’re looking for" autoComplete="off" autoCorrect="off" autoCapitalize="off" spellCheck="off" id="siteSearch" type="search" value={this.state.searchTerm} />
             </form>
           </div>
@@ -70,5 +71,3 @@ class SearchBtn extends Component {
 }
 
 export default SearchBtn;
-
-
