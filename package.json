@@ -8,7 +8,10 @@
     "mongoose": "^5.3.1",
     "morgan": "^1.9.1",
     "nodemon": "^1.18.4",
-    "react-router-dom": "^4.4.0-beta.4"
+    "react-materialize": "^2.4.7",
+    "react-router-dom": "^4.4.0-beta.4",
+    "react-site-nav": "^0.2.9",
+    "ship-components-dropdown-menu": "^1.1.3"
   },
   "devDependencies": {
     "concurrently": "^4.0.0"
@@ -27,5 +30,19 @@
     "client": "node internals/scripts/client.js",
     "server": "nodemon --watch server server/index.js",
     "server-prod": "node server/index.js"
-  }
+  },
+  "name": "final-project",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UCB-Project3/Final-Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UCB-Project3/Final-Project/issues"
+  },
+  "homepage": "https://github.com/UCB-Project3/Final-Project#readme"
 }

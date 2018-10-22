@@ -1,5 +1,5 @@
  .dropdown {
-     position: relative;
+    /* position: relative; */
      display: inline-block;
 }
  ul {
@@ -8,7 +8,7 @@
      padding: 0;
      top:45px;
      right:0px;
-     width: 200px;
+     width: 100px;
      background-color: white;
      font-weight:bold;
      position: absolute;
@@ -17,11 +17,13 @@
      z-index: 1;
 }
  li a {
+          position: relative; 
      color: #000;
      text-decoration: none;
 }
  li {
-     padding: 8px 16px;
+     margin-left: 2px;
+    /* padding: 8px 16px; */
      border-bottom: 1px solid #e5e5e5;
 }
  li:last-child {
@@ -33,10 +35,10 @@
 }
  .button{
      
-     width:178px;
+     width:10px;
      height:18px;
      background-color: #e5e5e5;
-     padding:12px;
+     padding:1px;
      border-radius:5px;
      font-weight:bold;
      color:black;
