@@ -1,42 +1,33 @@
 
 import React, { Component } from "react";
-import { Col, Row } from "react-materialize";
+import { Card, Col, Row, Icon } from "react-materialize";
+//import Page from '../components/Page';
+
 import Banner from "../../components/Banner"
-import Originalnav from "../../components/Nav"
-import "./Homepage.css";
+import Nav2 from "../../components/Nav2"
+
+
+const Homepage = props => (
 
 
 
-//import ReactDOM from "react-dom";
-//import Jumbotron from "../../components/Jumbotron";
 
-//import DeleteBtn from "../../components/DeleteBtn";
-//import API from "../../utils/API";
-//import { Col, Row, Container } from "../../components/Grid";
-//import { List } from "../../components/List";
-//import { Input, TextArea, FormBtn } from "../../components/Form";
+    <Row>
+        <Col s={12} m={16}>
 
-class Homepage extends Component {
 
-    render() {
-        return (
+
+            <Nav2 />
+
             <Row>
-                <Col s={12} m={16} >
-                    <div className="navdiv">
-                        <Originalnav />
-                    </div>
+                <Banner />
+            </Row>
 
-                    <div>
-
-                        <Banner />
-                    </div>
-
-                </Col>
-
-            </Row >
-
-        )
-    }
-}
+        </Col>
+    </Row>
+)
 
 export default Homepage;
+
+
+
