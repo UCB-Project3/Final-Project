@@ -4,9 +4,6 @@ import SearchResult from "../../components/SearchResult";
 import Wrapper from "../../components/Wrapper";
 
 class Search extends Component {
-    state = {
-        results: []
-    };
 
     render() {
         return (
@@ -19,13 +16,14 @@ class Search extends Component {
                     </div>
                 </div>
 
-                {this.state.results.map(result => (
+                {this.props.searchResults.map(result => (
                     <SearchResult
-                        image={result.image}
-                        brandname={result.brandname}
-                        productname={result.productname}
+                        image={result.image_link}
+                        brandname={result.brand}
+                        productname={result.name}
                         rating={result.rating}
                         price={result.price}
+                        key={result.image}
                     />
                 ))
                 }

@@ -8,7 +8,7 @@ import "./SearchResult.css";
 //</span>
 
 const SearchResult = props => (
-    <div className="row no-gutters">
+    <div key={props.key} className="searchCard row no-gutters">
         <div className="col-6 col-md-4">
 
         </div>

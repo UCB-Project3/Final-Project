@@ -7,6 +7,9 @@ import products from '../../data/products.json';
 
 class Nav extends Component {
 
+  componentDidMount = () => {
+    this.props.toSearchState();
+  }
 
   render() {
     return (
@@ -14,7 +17,10 @@ class Nav extends Component {
         <nav className="navbar">
           <div className="navbar-brand">
             <div className="srchdiv">
-              <SearchBtn />
+              <SearchBtn
+                onChange={this.props.handleInputChange}
+                onSubmit={this.props.handleFormSubmit}
+                searchTerm={this.props.searchTerm} />
             </div>
             <div className="dropdowndiv">
               <Dropdown />
