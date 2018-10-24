@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Homepage from "./pages/Homepage";
@@ -6,14 +6,11 @@ import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import Search from "./pages/Search";
 import Wrapper from "./components/Wrapper";
-import Nav from "./components/Nav";
+//import Nav from "./components/Nav";
 //import Title from "./components/Title";
 
-
-
 //import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
 
 // will USE these three Routes when LOGIN,SEARCH and Profile pages get ready
 //<Route exact path="/login" component={Login} />
@@ -22,20 +19,16 @@ import './App.css';
 
 // <Route component={NoMatch} />
 
-
 const App = () => (
   <Router>
-    <Wrapper>
-      <div>
-        <Nav />
-        <Switch>
-          <Route exact path="/" component={Homepage} />
-          <Route exact path="/login" component={Login} />
-          <Route exact path="/search" component={Search} />
-          <Route exact path="/profile" component={Profile} />
-        </Switch>
-      </div>
-    </Wrapper>
+    <div>
+      <Switch>
+        <Route exact path="/" component={Homepage} />
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/search" component={Search} />
+        <Route exact path="/profile" component={Profile} />
+      </Switch>
+    </div>
   </Router>
 );
 

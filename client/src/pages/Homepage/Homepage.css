@@ -1,0 +1,71 @@
+.position-data {
+  display: flex;
+}
+
+.First {
+  flex-basis: 33%;
+  padding-left: 10px;
+
+  height: 200px;
+  border: 1px solid black;
+}
+
+.second {
+  flex-basis: 66%;
+  padding: 47px;
+  height: 900px;
+  border: 1px solid black;
+}
+
+.explorerCard {
+  border: 1px solid black;
+}
+
+.cardtable {
+  border: 1px solid black;
+}
+
+.cardcontent {
+  border: 1px solid black;
+}
+
+.cardrow {
+  border: 1px solid black;
+}
+.cardcell1 {
+  border: 1px solid black;
+}
+
+.titlecolumn {
+  border: 1px solid black;
+}
+
+.cardcell3 {
+  border: 1px solid black;
+}
+
+.brandname {
+  border: 1px solid black;
+}
+
+.imagecell {
+  /* border: 1px solid black; */
+  width: 110px;
+
+  /* padding-left: 100px; */
+  /* padding-right: 20px; */
+  /* justify-content: flex-end; */
+  cursor: default;
+  border: 2px solid peru;
+  border-radius: 10px;
+}
+.producttable {
+  border-collapse: collapse;
+}
+.pricetable {
+  border: 1px solid black;
+}
+
+.ImageProduct {
+  background: url("/assets/img/Welcomepic.jpg") no-repeat;
+}
