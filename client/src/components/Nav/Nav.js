@@ -7,9 +7,9 @@ import products from '../../data/products.json';
 
 class Nav extends Component {
 
-  componentDidMount = () => {
+  /* componentDidMount = () => {
     this.props.toSearchState();
-  }
+  } */
 
   render() {
     return (

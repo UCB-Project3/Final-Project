@@ -20,7 +20,7 @@ class SearchBtn extends Component {
               className="searchForm"
               onSubmit={this.props.onSubmit} /* {...props} */
             >
-              <i class="fas fa-search" />
+              <i className="fas fa-search" />
               <input
                 onChange={this.props.onChange}
                 name="searchTerm"
