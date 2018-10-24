@@ -14,10 +14,10 @@ const SearchResult = props => (
         </div>
         <div className="col-12 col-sm-6 col-md-8">
             <img src={props.image} />
-            <div className="brandName">{props.brandname}</div>
-            <div className="productName">{props.productname}</div>
+            <div className="brandName">{props.brandname ? props.brandname[0].toUpperCase() + props.brandname.slice(1) : ""}</div>
+            <div className="productName">{props.productname ? props.productname[0].toUpperCase() + props.productname.slice(1) : ""}</div>
             <div className="productRating">{props.rating}</div>
-            <div className="price">{props.price}</div>
+            <div className="price">{(props.priceSign ? props.priceSign : "$") + (props.price.split('.')[1].length > 1 ? props.price : props.price + "0")}</div>
         </div>
     </div>
 );

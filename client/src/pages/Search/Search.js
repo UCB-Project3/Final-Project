@@ -24,6 +24,7 @@ class Search extends Component {
                         rating={result.rating}
                         price={result.price}
                         key={result.image}
+                        priceSign={result.priceSign}
                     />
                 ))
                 }
