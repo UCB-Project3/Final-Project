@@ -4,8 +4,8 @@
 
   }
   */
-.navigation-container{
-  background-color: white;
+.navbar{
+  background-color: lightgray;
   margin-top: 2px;
   margin-left: 10px;
   margin-right: 10px;
@@ -13,7 +13,6 @@
   border-style: solid;
   float:center;
   padding-left: 70 px;
-  width: 1600px;
   height: 100px;
 }
   .srchdiv {
