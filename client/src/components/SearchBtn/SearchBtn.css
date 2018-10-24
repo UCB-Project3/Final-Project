@@ -22,6 +22,7 @@
   padding-right: 24px;
 }
 .fa-search {
+  color: lightgray;
   top: 12px;
   left: 5px;
   position: absolute;
