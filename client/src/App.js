@@ -6,7 +6,7 @@ import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import Search from "./pages/Search";
 import Wrapper from "./components/Wrapper";
-//import Nav from "./components/Nav";
+import Nav from "./components/Nav";
 //import Title from "./components/Title";
 import products from './data/products.json';
 import { Redirect } from 'react-router-dom'
