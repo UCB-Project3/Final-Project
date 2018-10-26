@@ -10,26 +10,15 @@ import Nav from "./components/Nav";
 //import Title from "./components/Title";
 import products from './data/products.json';
 import { Redirect } from 'react-router-dom'
-
-
-//import logo from './logo.svg';
 import "./App.css";
-
-// will USE these three Routes when LOGIN,SEARCH and Profile pages get ready
-//<Route exact path="/login" component={Login} />
-//<Route exact path="/search" component={Search} />
-//<Route exact path="/profile" component={Profile} />
-
-// <Route component={NoMatch} />
-
-
 
 class App extends Component {
 
   state = {
     searchTerm: "",
     results: [],
-    toSearch: false
+    toSearch: false,
+    currentUser: ""
   }
 
   searchJSON = () => {
@@ -50,6 +39,20 @@ class App extends Component {
       toSearch: true
     });
 
+  }
+
+  userCheck = () => {
+    if (localStorage.getItem("okta-token-storage")) {
+      let user = localStorage.getItem("okta-token-storage")
+
+      user = JSON.parse(user).idToken.claims.email;
+
+      if (user !== this.state.currentUser) {
+        this.setState({
+          currentUser: user
+        })
+      }
+    }
   }
 
   handleFormSubmit = event => {
