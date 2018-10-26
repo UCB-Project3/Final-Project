@@ -1,5 +1,6 @@
 import React from "react";
 import "./SearchResult.css";
+import { Card } from "react-materialize";
 
 // The ...props means, spread all of the passed props onto this element
 // That way we don't have to define them all individually
@@ -8,18 +9,27 @@ import "./SearchResult.css";
 //</span>
 
 const SearchResult = props => (
-    <div className="row no-gutters">
-        <div className="col-6 col-md-4">
+    <Card title={props.productname ? props.productname[0].toUpperCase() + props.productname.slice(1) : ""} medium>
+        <div className="card-content" style={{ display: "flex" }}>
+            <img
+                src={props.image}
+                className="img-thumbnail"
+                alt="wine"
+                width="25"
+                height="100"
+                style={{ flex: 0 }}
+            />
+            <div
+                className="card-body"
+                style={{ flex: "1 1 auto", marginLeft: 5 }}
+            >
+                <div className="brandName">{props.brandname ? props.brandname[0].toUpperCase() + props.brandname.slice(1) : ""}</div>
+                <div className="productRating">{props.rating}</div>
+                <div className="price">{(props.priceSign ? props.priceSign : "$") + (props.price.split('.')[1].length > 1 ? props.price : props.price + "0")}</div>
 
+            </div>
         </div>
-        <div className="col-12 col-sm-6 col-md-8">
-            <img src={props.image} />
-            <div className="brandName">{props.brandname}</div>
-            <div className="productName">{props.productname}</div>
-            <div className="productRating">{props.rating}</div>
-            <div className="price">{props.price}</div>
-        </div>
-    </div>
+    </Card>
 );
 
 export default SearchResult;

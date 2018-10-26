@@ -1,4 +1,4 @@
-.dropdown {
+.dropdown1 {
   position: relative;
   top: 20px;
 }
@@ -33,8 +33,8 @@ li:hover {
   background-color: lightblue;
   color: white;
 }
-.dropdown-button {
-  width: 200px;
+.dropdown1-button {
+  width: 100px;
   background-color: white;
   border-radius: 5px;
   line-height: 40px;

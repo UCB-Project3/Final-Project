@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Priceslider } from "../../components/slider/Priceslider";
 import {
   Button,
   Card,
@@ -21,10 +22,26 @@ import Nav from "../../components/Nav";
 import { Col, Row, Container } from "../../components/Grid";
 //import { List } from "../../components/List";
 import "./Homepage.css";
+import { Slider, InputNumber } from "antd";
 
 class Homepage extends Component {
   state = {
-    rows: [{}]
+    rows: [{}],
+    price: 0,
+    buttons: [
+      {
+        name: "Skin Care",
+        checked: false
+      },
+      {
+        name: "Hair",
+        checked: false
+      },
+      {
+        name: "Perfume",
+        checked: false
+      }
+    ]
   };
 
   handleChange = idx => e => {
@@ -58,35 +75,72 @@ class Homepage extends Component {
     this.setState({ rows });
   };
 
+  handleCheckChange = index => {
+    console.log("btn clicked", index);
+    const buttons = this.state.buttons;
+    buttons[index].checked = !this.state.buttons[index].checked;
+    this.setState({
+      buttons
+    });
+  };
+  handlePriceChange = price => {
+    this.setState({
+      price
+    });
+  };
+
+  displayButtons = () => {
+    const { buttons } = this.state;
+    return buttons.map((btn, index) => (
+      <Button
+        checked={btn.checked}
+        id={index}
+        key={index}
+        className={
+          btn.checked
+            ? "green darken-2 white-text"
+            : "grey lighten-4 black-text"
+        }
+        onClick={() => this.handleCheckChange(index)}
+      >
+        {btn.name}
+      </Button>
+    ));
+  };
+
   render() {
     return (
       <div>
         <div className="row clearfix">
           <div className="col-md-12 column">
-            <Jumbotron>
-              <Nav />
-              <Banner />
-            </Jumbotron>
+            <Banner />
           </div>
           <div className="position-data">
-            <div className="First">Column 1</div>
+            <div className="First">
+              Filter By :
+              <div className="Filter-ByBrand">
+                Brand :<div>{this.displayButtons()}</div>
+              </div>
+              <div className="Filter-Byprice">
+                <p> Price Range </p>
+                <div>
+                  <Priceslider handlePriceChange={this.handlePriceChange} />
+                </div>
+              </div>
+            </div>
             <div className="second">
-              <Card title="Title goes here" medium>
+              <Card>
                 <div className="card-content" style={{ display: "flex" }}>
                   <img
                     src="https://images.vivino.com/thumbs/tG6qBPJLQY-5x6s8P1pIYQ_pb_x300.png"
                     className="img-thumbnail"
                     alt="wine"
-                    width="25"
-                    height="100"
                     style={{ flex: 0 }}
                   />
-                  <div
-                    className="card-body"
-                    style={{ flex: "1 1 auto", marginLeft: 5 }}
-                  >
-                    Body goes here
-                  </div>
+                  <span className="card-body" style={{ flex: "1 1 auto" }}>
+                    <p>Title goes here</p>
+                    <p>Body goes here</p>
+                  </span>
                 </div>
               </Card>
               {/*Button for Table here*/}

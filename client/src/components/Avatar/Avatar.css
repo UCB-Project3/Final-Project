@@ -1,0 +1,27 @@
+.img-circle {
+  border-radius: 50%;
+}
+/*img.img-circle {
+  background: black;
+}
+
+span {
+  left: 0;
+  text-align: center;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  bottom: 0;
+  padding: 20px 0;
+}
+
+*/
+
+.img-thumbnail > div {
+  display: inline-block;
+  overflow: hidden;
+  height: 140px;
+  border: 5px solid #fff;
+  -webkit-box-shadow: 0 2px 0 2px #333;
+  box-shadow: 0 2px 0 2px #333;
+  border-radius: 50%;
+}

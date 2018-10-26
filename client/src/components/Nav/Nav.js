@@ -1,36 +1,57 @@
 import React, { Component } from "react";
-//import { Navbar, NavItem, Icon } from 'react-materialize';
-import Dropdown from "../dropdownmenu/Dropdown";
-import Dropdown1 from "../dropdownmenu1/Dropdown1";
-import Dropdown2 from "../dropdownmenu2/Dropdown2";
+//import { Icon } from "react-materialize";
+import Avatarpic from "../Avatar/Avatarbefore";
+import Makeup from "../dropdownmakeup/Makeup";
+import Dropdownoffer from "../dropdownoffer/Dropdownoffer";
+import Dropdownnew from "../dropdownnew/Dropdownnew";
 import SearchBtn from "../SearchBtn/SearchBtn";
 import "./Nav.css";
 import products from "../../data/products.json";
+import Userdropmenu from "../Userdropmenu/Userdropmenu";
+import Cascadingmenu from "../Cascadingmenu/Cascadingmenu";
 
 class Nav extends Component {
   render() {
     return (
-      <div className="navigation-container">
-        <nav className="navbar">
-          <div className="navbar-brand">
-            <div className="srchdiv">
-              <SearchBtn />
-            </div>
-            <div className="dropdowndiv">
-              <Dropdown />
+      <div>
+        <div className="navbarpatition">
+          <div className="logodiv">logo</div>
 
-              <div className="dropdowndiv1">
-                <Dropdown1 />
-              </div>
-              <div className="dropdowndiv2">
-                <Dropdown2 />
-              </div>
-            </div>
+          <div className="dropdownmakeupdiv">{/*  <Makeup />*/}</div>
+          <div className="dropdownnewdiv">
+            {/*<Dropdownnew />*/}
+            <Cascadingmenu menuName="Cosmetics" />
           </div>
-        </nav>
+          <div className="dropdownofferdiv">
+            {/* <Dropdownoffer />*/}
+            <Cascadingmenu menuName="Offer" />
+          </div>
+          <div className="srchdiv">
+            <SearchBtn
+              onChange={this.props.handleInputChange}
+              onSubmit={this.props.handleFormSubmit}
+              searchTerm={this.props.searchTerm}
+            />
+          </div>
+
+          <div className="shopicon">
+            <i className="fas fa-shopping-cart" />
+          </div>
+          <div className="dropdownicon">
+            <Cascadingmenu menuName="" />
+            {/* <Userdropmenu />*/}
+          </div>
+          <div className="avatarpic" size="2x">
+            <Avatarpic />
+          </div>
+        </div>
       </div>
     );
   }
 }
 
 export default Nav;
+
+/*<div className="dropdownicon">
+            <i className="fas fa-chevron-down" />
+          </div> */

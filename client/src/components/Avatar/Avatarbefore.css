@@ -1,0 +1,22 @@
+.fa-user {
+  color: gray;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+}
+
+.profileavatar {
+  background-color: #f2f2f2;
+
+  float: right;
+  width: 40px;
+  height: 40px;
+  margin-right: 1px;
+  margin-top: 20px;
+  border-radius: 32px;
+  position: relative;
+}
+
+/*
+border: 2px solid peru;
+*/

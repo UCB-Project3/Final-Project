@@ -1,7 +1,7 @@
 import React from "react";
-import "./dropdown.css";
+//import "./dropdownoffer.css";
 
-class Dropdown extends React.Component {
+class Dropdownoffer extends React.Component {
   constructor() {
     super();
 
@@ -28,14 +28,14 @@ class Dropdown extends React.Component {
 
   render() {
     return (
-      <div className="dropdown">
-        <button
-          className="dropdown-button"
+      <div className="dropdown1">
+        <div
+          className="dropdown1-button"
           onClick={this.showDropdownMenu}
           large={false}
         >
-          Make Up
-        </button>
+          Offer
+        </div>
 
         {this.state.displayMenu ? (
           <ul>
@@ -63,4 +63,4 @@ class Dropdown extends React.Component {
   }
 }
 
-export default Dropdown;
+export default Dropdownoffer;
