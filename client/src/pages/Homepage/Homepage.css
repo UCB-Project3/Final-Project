@@ -254,3 +254,14 @@ priceslider {
 .ui-input-search:after {
   background-image: none;
 }
+
+/*
+. btn {
+  border-radius: 32px;
+}
+
+*/
+
+.Filter-ByBrand {
+  border-radius: 32px;
+}

@@ -30,15 +30,44 @@ class Homepage extends Component {
     price: 0,
     buttons: [
       {
-        name: "Skin Care",
+        name: "clinique",
         checked: false
       },
       {
-        name: "Hair",
+        name: "dior",
         checked: false
       },
       {
-        name: "Perfume",
+        name: "smashbox",
+        checked: false
+      },
+      {
+        name: "maybelline",
+        checked: false
+      },
+
+      {
+        name: "l'oreal",
+        checked: false
+      },
+      {
+        name: "nyx",
+        checked: false
+      },
+      {
+        name: "revlon",
+        checked: false
+      },
+      {
+        name: "e.l.f.",
+        checked: false
+      },
+      {
+        name: "covergirl",
+        checked: false
+      },
+      {
+        name: "physicians formula",
         checked: false
       }
     ]
@@ -95,7 +124,7 @@ class Homepage extends Component {
       <Button
         checked={btn.checked}
         id={index}
-        key={index}
+        style={{ margin: 5 }}
         className={
           btn.checked
             ? "green darken-2 white-text"
@@ -119,7 +148,7 @@ class Homepage extends Component {
             <div className="First">
               Filter By :
               <div className="Filter-ByBrand">
-                Brand :<div>{this.displayButtons()}</div>
+                Brand :<div style={{}}>{this.displayButtons()}</div>
               </div>
               <div className="Filter-Byprice">
                 <p> Price Range </p>
