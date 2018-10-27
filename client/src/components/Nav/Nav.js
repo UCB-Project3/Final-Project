@@ -41,6 +41,8 @@ class Nav extends Component {
             <Cascadingmenu menuName="" />
             {/* <Userdropmenu />*/}
           </div>
+          <a href = "/Login">Login </a>
+          <a href = "/signup">Sign Up</a>
           <div className="avatarpic" size="2x">
             <Avatarpic />
           </div>
