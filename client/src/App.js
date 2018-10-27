@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Homepage from "./pages/Homepage";
-import Login from "./pages/Login";
+import LoginPage from "./pages/LoginPage";
+import SignUpPage from "./pages/SignUpPage";
 import Profile from "./pages/Profile";
 import Search from "./pages/Search";
 import Wrapper from "./components/Wrapper";
@@ -91,7 +92,8 @@ class App extends Component {
           {this.searchPage()}
           <Switch>
             <Route exact path="/" component={Homepage} />
-            <Route exact path="/login" component={Login} />
+            <Route exact path="/login" component={LoginPage} />
+            <Route exact path="/signup" component={SignUpPage} />
             {/* <Route exact path="/search" component={Search} searchResults={this.state.searchResults} /> */}
             <Route
               exact

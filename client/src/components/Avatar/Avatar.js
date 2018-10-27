@@ -25,6 +25,7 @@ class Avatarpicupload extends Component {
 
   render() {
     return (
+      
       <form className="profileavatar">
         <i className="fas fa-user" />
         <Avatar
