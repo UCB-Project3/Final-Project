@@ -15,9 +15,9 @@ const SearchResult = props => (
                 src={props.image}
                 className="img-thumbnail"
                 alt="wine"
-            /* width="100"
-            height="100"
-            style={{ flex: 0 }} */
+                width="25"
+                height="100"
+                style={{ flex: 0 }}
             />
             <div
                 className="card-body"
