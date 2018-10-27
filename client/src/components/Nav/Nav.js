@@ -1,35 +1,57 @@
 import React, { Component } from "react";
-//import { Navbar, NavItem, Icon } from 'react-materialize';
-import Dropdown from "../dropdownmenu/Dropdown";
+//import { Icon } from "react-materialize";
+import Avatarpic from "../Avatar/Avatarbefore";
+import Makeup from "../dropdownmakeup/Makeup";
+import Dropdownoffer from "../dropdownoffer/Dropdownoffer";
+import Dropdownnew from "../dropdownnew/Dropdownnew";
 import SearchBtn from "../SearchBtn/SearchBtn";
-import './Nav.css'
-import products from '../../data/products.json';
+import "./Nav.css";
+import products from "../../data/products.json";
+import Userdropmenu from "../Userdropmenu/Userdropmenu";
+import Cascadingmenu from "../Cascadingmenu/Cascadingmenu";
 
 class Nav extends Component {
-
-  /* componentDidMount = () => {
-    this.props.toSearchState();
-  } */
-
   render() {
     return (
-      <div className="navigation-container">
-        <nav className="navbar">
-          <div className="navbar-brand">
-            <div className="srchdiv">
-              <SearchBtn
-                onChange={this.props.handleInputChange}
-                onSubmit={this.props.handleFormSubmit}
-                searchTerm={this.props.searchTerm} />
-            </div>
-            <div className="dropdowndiv">
-              <Dropdown />
-            </div>
+      <div>
+        <div className="navbarpatition">
+          <div className="logodiv">logo</div>
+
+          <div className="dropdownmakeupdiv">{/*  <Makeup />*/}</div>
+          <div className="dropdownnewdiv">
+            {/*<Dropdownnew />*/}
+            <Cascadingmenu menuName="Cosmetics" />
           </div>
-        </nav>
-      </div >
-    )
+          <div className="dropdownofferdiv">
+            {/* <Dropdownoffer />*/}
+            <Cascadingmenu menuName="Offer" />
+          </div>
+          <div className="srchdiv">
+            <SearchBtn
+              onChange={this.props.handleInputChange}
+              onSubmit={this.props.handleFormSubmit}
+              searchTerm={this.props.searchTerm}
+            />
+          </div>
+
+          <div className="shopicon">
+            <i className="fas fa-shopping-cart" />
+          </div>
+          <div className="dropdownicon">
+            <Cascadingmenu menuName="" />
+            {/* <Userdropmenu />*/}
+          </div>
+          <div className="avatarpic" size="2x">
+            <Avatarpic />
+          </div>
+        </div>
+      </div>
+    );
   }
 }
 
 export default Nav;
+
+/*<div className="dropdownicon">
+            <i className="fas fa-chevron-down" />
+          </div> */

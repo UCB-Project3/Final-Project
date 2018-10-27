@@ -1,0 +1,7 @@
+div.slider_value input.ant-input-number-input {
+  border-bottom: none;
+}
+div.slider_value input.ant-input-number-input:focus {
+  border-bottom: none;
+  box-shadow: none;
+}

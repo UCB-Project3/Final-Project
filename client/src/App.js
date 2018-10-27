@@ -13,7 +13,6 @@ import { Redirect } from 'react-router-dom'
 import "./App.css";
 
 class App extends Component {
-
   state = {
     searchTerm: "",
     results: [],
@@ -27,19 +26,22 @@ class App extends Component {
     let newResults = [];
 
     products.forEach(product => {
-      if ((product.name && product.name.toLowerCase().indexOf(term) > -1) ||
-        (product.category && product.category.toLowerCase().indexOf(term) > -1) ||
-        (product.product_type && product.product_type.toLowerCase().indexOf(term) > -1)) {
+      if (
+        (product.name && product.name.toLowerCase().indexOf(term) > -1) ||
+        (product.category &&
+          product.category.toLowerCase().indexOf(term) > -1) ||
+        (product.product_type &&
+          product.product_type.toLowerCase().indexOf(term) > -1)
+      ) {
         newResults.push(product);
       }
-    })
+    });
 
     this.setState({
       results: newResults,
       toSearch: true
     });
-
-  }
+  };
 
   userCheck = () => {
     if (localStorage.getItem("okta-token-storage")) {
@@ -59,57 +61,54 @@ class App extends Component {
     event.preventDefault();
 
     this.searchJSON();
-
-  }
+  };
 
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
       [name]: value
     });
-
-  }
+  };
 
   toSearchState = () => {
-
     if (this.state.toSearch) {
       this.setState({
         toSearch: false
-      })
+      });
     }
-  }
+  };
 
   searchPage = () => {
     if (this.state.toSearch) {
-      return <Redirect to='/search' />
+      return <Redirect to="/search" />;
     }
-  }
+  };
 
   render() {
-
     return (
       <Router>
-        <Wrapper>
-          <div>
-            <Nav
-              handleInputChange={this.handleInputChange}
-              handleFormSubmit={this.handleFormSubmit}
-              searchTerm={this.state.searchTerm}
-              toSearchState={this.toSearchState}
+        <div>
+          <Nav
+            handleInputChange={this.handleInputChange}
+            handleFormSubmit={this.handleFormSubmit}
+            searchTerm={this.state.searchTerm}
+            toSearchState={this.toSearchState}
+          />
+          {this.searchPage()}
+          <Switch>
+            <Route exact path="/" component={Homepage} />
+            <Route exact path="/login" component={Login} />
+            {/* <Route exact path="/search" component={Search} searchResults={this.state.searchResults} /> */}
+            <Route
+              exact
+              path="/search"
+              component={() => <Search searchResults={this.state.results} />}
             />
-            {this.searchPage()}
-            <Switch>
-
-              <Route exact path="/" component={Homepage} />
-              <Route exact path="/login" component={Login} />
-              {/* <Route exact path="/search" component={Search} searchResults={this.state.searchResults} /> */}
-              <Route exact path="/search" component={() => <Search searchResults={this.state.results} />} />
-              <Route exact path="/profile" component={Profile} />
-            </Switch>
-          </div>
-        </Wrapper>
+            <Route exact path="/profile" component={Profile} />
+          </Switch>
+        </div>
       </Router>
-    )
+    );
   }
 }
 

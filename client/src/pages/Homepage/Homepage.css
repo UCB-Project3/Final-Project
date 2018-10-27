@@ -1,20 +1,64 @@
+/* card css */
+
+.card .card-content .card-title {
+  display: block;
+  width: 300px;
+  line-height: 32px;
+  margin-bottom: 8px;
+}
+
+.card {
+  height: 250px;
+  width: 800px;
+}
+.img {
+  height: 184px;
+  flex: 0 1 0%;
+  width: 155px;
+}
+
+.card-title-title {
+  float: right;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  padding: 0 0 0 10px;
+
+  /* width: 260px;
+  float: right;
+  padding-top: 20px; */
+}
+.card-content {
+  height: 220px;
+
+  /* width: 200px; */
+  display: flex;
+  flex: 0 1 0%;
+}
+.card .card-content {
+  padding: 14px;
+  border-radius: 0 0 2px 2px;
+}
+.row clearfix {
+  background-color: lightgray;
+}
+
 .position-data {
   display: flex;
 }
 
 .First {
-  flex-basis: 33%;
-  padding-left: 10px;
+  flex-basis: 40%;
+  padding-left: 100px;
 
-  height: 200px;
-  border: 1px solid black;
+  height: 1200px;
 }
 
 .second {
-  flex-basis: 66%;
+  flex-basis: 59%;
   padding: 47px;
-  height: 900px;
-  border: 1px solid black;
+  height: 1200px;
 }
 
 .explorerCard {
@@ -68,4 +112,145 @@
 
 .ImageProduct {
   background: url("/assets/img/Welcomepic.jpg") no-repeat;
+}
+
+/*filter panel*/
+
+/*
+.container {
+  width: 70px;
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.container + label input:checked ~ .checkmark {
+  background-color: #2196f3;
+  color: blue;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.ui-btn {
+  width: 20px;
+}
+
+*/
+
+.ui-checkbox {
+  width: 120px;
+}
+
+/* check buttons are here */
+
+.secondcheck {
+  float: right;
+  width: 500px;
+  height: 10px;
+}
+
+.thirdcheck {
+  float: left;
+  width: 500px;
+  height: 10px;
+}
+
+.ui-checkbox,
+.ui-radio {
+  position: relative;
+
+  margin: 0;
+}
+
+.Filter-Byprice {
+  margin-top: 100px;
+}
+
+/*  second slider */
+
+priceslider {
+  margin: 60px 0 0 0 !important;
+}
+
+.ui-slider .ui-btn-inner {
+  padding: 4px 0 0 0 !important;
+}
+
+.ui-slider-popup {
+  position: absolute !important;
+  width: 64px;
+  height: 64px;
+  text-align: center;
+  font-size: 36px;
+  padding-top: 14px;
+  z-index: 100;
+  opacity: 0.8;
+}
+.img-thumbnail {
+  height: 184px;
+  padding: 0.25rem;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  max-width: 100%;
+  /* height: auto; 
+    flex-shrink: 0; */
+}
+
+.ui-input-text,
+.ui-input-search {
+  margin: 0.5em 0;
+  /* border-width: 1px; */
+  /* border-style: solid; */
+}
+
+.ui-alt-icon.ui-icon-search:after,
+.ui-alt-icon .ui-icon-search:after,
+.ui-input-search:after {
+  background-image: none;
 }

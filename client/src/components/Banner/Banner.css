@@ -3,8 +3,11 @@
   height: 150px;
 }
 .welcome-premium-banner__header {
-  text-shadow: 1px 1px 2px white;
-  font-size: 50px;
+  color: white;
+  margin-left: 400px;
+  font-weight: 900;
+  text-shadow: 1px 1px 0px rgba(100, 95, 95, 0.8), 3px 3px 3px black;
+  font-size: 30px;
   position: relative;
   top: 50px;
 }

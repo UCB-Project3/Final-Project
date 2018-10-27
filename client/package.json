@@ -5,8 +5,11 @@
   "dependencies": {
     "@material-ui/core": "^3.3.0",
     "@material-ui/icons": "^3.0.1",
+    "antd": "^3.10.2",
     "nice-react-layout": "^0.7.2",
+    "rc-menu": "^7.4.17",
     "react": "^16.5.2",
+    "react-avatar-edit": "^0.6.0",
     "react-dom": "^16.5.2",
     "react-materialize": "^2.4.7",
     "react-router-dom": "^4.3.1",
