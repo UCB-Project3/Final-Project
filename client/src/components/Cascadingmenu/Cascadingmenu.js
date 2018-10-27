@@ -5,20 +5,21 @@ import { Menu, Dropdown, Icon, message } from "antd";
 
 class Cascadingmenu extends React.Component {
   render() {
-    const SubMenu = Menu.SubMenu;
+
+    const { SubMenu, Item } = Menu;
+    const subMenuElements = sub => sub.map(subelem => <Item key={subelem.name}>{subelem.name}</Item>);
+
+    const menuElements = () => {
+      return this.props.menuElements.map(element => 
+          {return (element.subMenu) 
+            ? <SubMenu title={element.name} key={element.name}>{subMenuElements(element.subMenu)}</SubMenu>
+            : <Item key={element.name}>{element.name}</Item>}
+      )
+    }
 
     const menu = (
       <Menu>
-        <Menu.Item>1st menu item</Menu.Item>
-        <Menu.Item>2nd menu item</Menu.Item>
-        <SubMenu title="sub menu">
-          <Menu.Item>3rd menu item</Menu.Item>
-          <Menu.Item>4th menu item</Menu.Item>
-        </SubMenu>
-        <SubMenu title="disabled sub menu" disabled>
-          <Menu.Item>5d menu item</Menu.Item>
-          <Menu.Item>6th menu item</Menu.Item>
-        </SubMenu>
+        {menuElements()}
       </Menu>
     );
     return (
