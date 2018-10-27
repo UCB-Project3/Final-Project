@@ -11,7 +11,50 @@ import Userdropmenu from "../Userdropmenu/Userdropmenu";
 import Cascadingmenu from "../Cascadingmenu/Cascadingmenu";
 
 class Nav extends Component {
+
   render() {
+
+    const CosmeticsMenu = [{
+      name: "Skin",
+      route: "/skin"
+    }, {
+      name: "Hair",
+      route: "/hair", 
+    }, {
+      name: "Perfume",
+      route: "/perfume",
+      subMenu: [{
+        name: "Womens",
+        route: "/womens"
+      }, {
+        name: "Mens",
+        route: "/mens"
+      }, {
+        name: "Childrens",
+        route: "/childrens"
+      }]
+    }];
+    const OfferMenu = [{
+      name: "Offers1",
+      route: "/offers1"
+    }, {
+      name: "Offers2",
+      route: "/offers2"
+    }, {
+      name: "Offers3",
+      route: "/offers3"
+    }];
+    const ProfileMenu = [{
+      name: "My Account",
+      route: "/account"
+    }, {
+      name: "Settings",
+      route: "/settings"
+    }, {
+      name: "Sign out",
+      route: "/logout"
+    }];
+
     return (
       <div>
         <div className="navbarpatition">
@@ -20,11 +63,11 @@ class Nav extends Component {
           <div className="dropdownmakeupdiv">{/*  <Makeup />*/}</div>
           <div className="dropdownnewdiv">
             {/*<Dropdownnew />*/}
-            <Cascadingmenu menuName="Cosmetics" />
+            <Cascadingmenu menuName="Cosmetics" menuElements={CosmeticsMenu} />
           </div>
           <div className="dropdownofferdiv">
             {/* <Dropdownoffer />*/}
-            <Cascadingmenu menuName="Offer" />
+            <Cascadingmenu menuName="Offer" menuElements={OfferMenu} />
           </div>
           <div className="srchdiv">
             <SearchBtn
@@ -38,7 +81,7 @@ class Nav extends Component {
             <i className="fas fa-shopping-cart" />
           </div>
           <div className="dropdownicon">
-            <Cascadingmenu menuName="" />
+            <Cascadingmenu menuName="" menuElements={ProfileMenu} />
             {/* <Userdropmenu />*/}
           </div>
           <a href = "/Login">Login </a>

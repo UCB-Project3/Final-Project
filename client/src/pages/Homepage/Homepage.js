@@ -124,6 +124,7 @@ class Homepage extends Component {
       <Button
         checked={btn.checked}
         id={index}
+        key={index}
         style={{ margin: 5 }}
         className={
           btn.checked
