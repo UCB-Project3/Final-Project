@@ -25,7 +25,7 @@ const SearchResult = props => (
             >
                 <div className="brandName">{props.brandname ? props.brandname[0].toUpperCase() + props.brandname.slice(1) : ""}</div>
                 <div className="productRating">{props.rating}</div>
-                <div className="price">{(props.priceSign ? props.priceSign : "$") + (props.price.split('.')[1].length > 1 ? props.price : props.price + "0")}</div>
+                <div className="price">{(props.priceSign ? props.priceSign : "$") + (props.price ? (props.price.split('.')[1].length > 1 ? props.price : props.price + "0") : "5.00")}</div>
 
             </div>
         </div>
