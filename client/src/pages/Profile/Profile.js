@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
+import "./Profile.css";
+
 
 class Profile extends Component {
     render() {
         return (
-            <div>Profile page</div>
-        );
-    }
-}
+            
+
+    
 
 export default Profile;
