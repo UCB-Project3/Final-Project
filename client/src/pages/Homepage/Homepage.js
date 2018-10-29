@@ -176,23 +176,6 @@ class Homepage extends Component {
               {/*Button for Table here*/}
             </div>
           </div>
-
-          <Col size="md-6 sm-12">
-            <Footer
-              copyrights="&copy 2015 Copyright Text"
-              moreLinks={
-                <a className="grey-text text-lighten-4 right" href="#!">
-                  More Links
-                </a>
-              }
-              className="example"
-            >
-              <p className="grey-text text-lighten-4">
-                You can use rows and columns here to organize your footer
-                content.
-              </p>
-            </Footer>
-          </Col>
         </div>
       </div>
     );
@@ -200,69 +183,3 @@ class Homepage extends Component {
 }
 
 export default Homepage;
-
-/*
-
-
-<table
-                  className="table table-bordered table-hover"
-                  id="tab_logic"
-                >
-                  <thead>
-                    <tr>
-                      <th className="text-center"> # </th>
-                      <th className="text-center"> Name </th>
-                      <th className="text-center"> Mobile </th>
-                      <th />
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {this.state.rows.map((item, idx) => (
-                      <tr id="addr0" key={idx}>
-                        <td>{idx}</td>
-                        <td>
-                          <input
-                            type="text"
-                            name="name"
-                            value={this.state.rows[idx].name}
-                            onChange={this.handleChange(idx)}
-                            className="form-control"
-                          />
-                        </td>
-                        <td>
-                          <input
-                            type="text"
-                            name="mobile"
-                            value={this.state.rows[idx].mobile}
-                            onChange={this.handleChange(idx)}
-                            className="form-control"
-                          />
-                        </td>
-                        <td>
-                          <button
-                            className="btn btn-outline-danger btn-sm"
-                            onClick={this.handleRemoveSpecificRow(idx)}
-                          >
-                            Remove
-                          </button>
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-
-               
-                {/*Table Finish here*/
-/*Button for Table Start here*/
-/*  
-                <button onClick={this.handleAddRow} className="btn btn-primary">
-                  Add Row
-                </button>
-                <button
-                  onClick={this.handleRemoveRow}
-                  className="btn btn-danger float-right"
-                >
-                  Delete Last Row
-                </button>
-
-*/

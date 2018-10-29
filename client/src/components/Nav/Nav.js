@@ -11,54 +11,68 @@ import Userdropmenu from "../Userdropmenu/Userdropmenu";
 import Cascadingmenu from "../Cascadingmenu/Cascadingmenu";
 
 class Nav extends Component {
-
   render() {
-
-    const CosmeticsMenu = [{
-      name: "Skin",
-      route: "/skin"
-    }, {
-      name: "Hair",
-      route: "/hair", 
-    }, {
-      name: "Perfume",
-      route: "/perfume",
-      subMenu: [{
-        name: "Womens",
-        route: "/womens"
-      }, {
-        name: "Mens",
-        route: "/mens"
-      }, {
-        name: "Childrens",
-        route: "/childrens"
-      }]
-    }];
-    const OfferMenu = [{
-      name: "Offers1",
-      route: "/offers1"
-    }, {
-      name: "Offers2",
-      route: "/offers2"
-    }, {
-      name: "Offers3",
-      route: "/offers3"
-    }];
-    const ProfileMenu = [{
-      name: "My Account",
-      route: "/account"
-    }, {
-      name: "Settings",
-      route: "/settings"
-    }, {
-      name: "Sign out",
-      route: "/logout"
-    }];
+    const CosmeticsMenu = [
+      {
+        name: "Skin",
+        route: "/skin"
+      },
+      {
+        name: "Hair",
+        route: "/hair"
+      },
+      {
+        name: "Perfume",
+        route: "/perfume",
+        subMenu: [
+          {
+            name: "Womens",
+            route: "/womens"
+          },
+          {
+            name: "Mens",
+            route: "/mens"
+          },
+          {
+            name: "Childrens",
+            route: "/childrens"
+          }
+        ]
+      }
+    ];
+    const OfferMenu = [
+      {
+        name: "Offers1",
+        route: "/offers1"
+      },
+      {
+        name: "Offers2",
+        route: "/offers2"
+      },
+      {
+        name: "Offers3",
+        route: "/offers3"
+      }
+    ];
+    const ProfileMenu = [
+      {
+        name: "My Account",
+        route: "/account"
+      },
+      {
+        name: "Settings",
+        route: "/settings"
+      },
+      {
+        name: "Sign out",
+        route: "/logout"
+      }
+    ];
 
     return (
       <div>
         <div className="navbarpatition">
-          <div className="logodiv">logo</div>
+          <div className="logodiv">MarkUp</div>
 
           <div className="dropdownmakeupdiv">{/*  <Makeup />*/}</div>
           <div className="dropdownnewdiv">
@@ -80,12 +94,16 @@ class Nav extends Component {
           <div className="shopicon">
             <i className="fas fa-shopping-cart" />
           </div>
+          <div className="signupbutton ">
+            <a href="/login" className="signinfeature">
+              Sign In
+            </a>
+          </div>
           <div className="dropdownicon">
             <Cascadingmenu menuName="" menuElements={ProfileMenu} />
             {/* <Userdropmenu />*/}
           </div>
-          <a href = "/Login">Login </a>
-          <a href = "/signup">Sign Up</a>
+
           <div className="avatarpic" size="2x">
             <Avatarpic />
           </div>

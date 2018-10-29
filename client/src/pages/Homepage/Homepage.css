@@ -265,3 +265,14 @@ priceslider {
 .Filter-ByBrand {
   border-radius: 32px;
 }
+
+.page-footer {
+  color: black;
+  background-color: #f2f2f2;
+}
+
+.copytag {
+  color: black;
+  margin-top: 20px;
+  font-size: 20px;
+}
