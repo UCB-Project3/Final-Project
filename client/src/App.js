@@ -6,11 +6,13 @@ import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
 import Profile from "./pages/Profile";
 import Search from "./pages/Search";
+import MainFooter from "./components/Footer";
 import Wrapper from "./components/Wrapper";
 import Nav from "./components/Nav";
 //import Title from "./components/Title";
 import products from "./data/products.json";
 import { Redirect } from "react-router-dom";
+import { Layout } from "antd";
 
 //import logo from './logo.svg';
 import "./App.css";
@@ -102,6 +104,7 @@ class App extends Component {
             />
             <Route exact path="/profile" component={Profile} />
           </Switch>
+          <MainFooter />
         </div>
       </Router>
     );
