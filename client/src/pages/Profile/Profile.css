@@ -3,7 +3,7 @@
 }
 .profilemaincontent {
   max-width: 500px;
-  height: 1200px;
+  /* min-height: 1200px; */
   margin: auto;
   background: white;
   padding: 10px;

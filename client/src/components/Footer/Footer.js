@@ -4,6 +4,7 @@ import "./Footer.css";
 class MainFooter extends Component {
   render() {
     return (
+      <div className="row">
       <div className="col-md-12 column">
         <footer className="page-footer font-small lightgray darken-3 black-text">
           <div className="container">
@@ -52,6 +53,7 @@ class MainFooter extends Component {
             </div>
           </div>
         </footer>
+      </div>
       </div>
     );
   }
