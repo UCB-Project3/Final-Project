@@ -16,6 +16,11 @@ import {
 } from "react-materialize";
 import { Layout, Menu, Breadcrumb, Footer } from "antd";
 import ReactDOM from "react-dom";
+import "./Profile.css";
+
+// import Avatar from "../../Avatar"
+
+
 
 class Profile extends Component {
   state = {
