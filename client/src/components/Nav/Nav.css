@@ -58,14 +58,16 @@
 }
 
 .logodiv {
+  margin-top: 15px;
   margin-left: 10px;
   text-align: center;
 
-  text-shadow: -1px -1px 0px rgba(255, 255, 255, 0.3),
-    1px 1px 0px rgba(0, 0, 0, 0.8);
+  /* text-shadow: -1px -1px 0px rgba(255, 255, 255, 0.3),
+    1px 1px 0px rgba(0, 0, 0, 0.8); */
   color: rgb(77, 70, 70);
-  opacity: 0.4;
-  font: 700 50px "Bitter";
+  /* opacity: 0.4; */
+
+  font: 700 25px "Bitter";
   float: left;
   color: rgb(60, 2, 107);
 }

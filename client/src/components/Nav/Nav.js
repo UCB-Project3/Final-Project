@@ -10,6 +10,19 @@ import products from "../../data/products.json";
 import Userdropmenu from "../Userdropmenu/Userdropmenu";
 import Cascadingmenu from "../Cascadingmenu/Cascadingmenu";
 
+// const Logo = (
+//   <div>
+//     <img
+//       src="/assets/img/Logo"
+//       alt="logo"
+//       width="60"
+//       height="60"
+//       className="logo-img"
+//     />
+//     <span className="app-name">Mark Up</span>
+//   </div>
+// );
+
 class Nav extends Component {
   render() {
     const CosmeticsMenu = [
