@@ -5,6 +5,7 @@ import Homepage from "./pages/Homepage";
 import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
 import Profile from "./pages/Profile";
+import WishlistPage from "./pages/WishlistPage";
 import Search from "./pages/Search";
 import MainFooter from "./components/Footer";
 import Wrapper from "./components/Wrapper";
@@ -28,7 +29,8 @@ class App extends Component {
   state = {
     searchTerm: "",
     results: [],
-    toSearch: false
+    toSearch: false,
+    loggedIn: false
   };
 
   searchJSON = () => {
@@ -90,11 +92,13 @@ class App extends Component {
             handleFormSubmit={this.handleFormSubmit}
             searchTerm={this.state.searchTerm}
             toSearchState={this.toSearchState}
+            loggedIn={this.state.loggedIn}
           />
           {this.searchPage()}
           <Switch>
             <Route exact path="/" component={() => <Homepage searchResults={this.state.results} />} />
             <Route exact path="/login" component={LoginPage} />
+            <Route exact path="/wishlist" component={WishlistPage} />
             <Route exact path="/signup" component={SignUpPage} />
             {/* <Route exact path="/search" component={Search} searchResults={this.state.searchResults} /> */}
             {/* <Route

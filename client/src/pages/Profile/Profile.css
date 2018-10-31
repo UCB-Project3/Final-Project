@@ -8,3 +8,108 @@
   background: white;
   padding: 10px;
 }
+
+.ant-menu-dark,
+.ant-menu-dark .ant-menu-sub {
+  background: rgb(165, 110, 135) !important;
+}
+
+.ant-layout-sider-trigger {
+  position: sticky !important;
+  text-align: center;
+  bottom: 0;
+  cursor: pointer;
+  height: 48px;
+  line-height: 48px;
+  background-color: rgb(161, 17, 34) !important;
+  /* color: #fff; */
+  /* background: #002140; */
+  /* z-index: 1;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s; */
+}
+.ant-menu-item:hover {
+  background: rgb(165, 110, 135) !important;
+}
+.ant-menu-submenu:hover {
+  background: rgb(165, 110, 135) !important;
+}
+/* .ant-layout-sider {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  position: relative;
+  background: rgb(161, 17, 34);
+  min-width: 0;
+} */
+
+.ant-layout-sider {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  position: relative;
+  background: rgb(161, 17, 34) !important;
+  min-width: 0;
+}
+.ant-layout-sider-trigger {
+  position: fixed;
+  text-align: center;
+  bottom: 0;
+  cursor: pointer;
+  height: 48px;
+  line-height: 48px;
+  color: #fff;
+  background: rgb(161, 17, 34);
+  z-index: 1;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.ant-layout-sider .ant-layout-sider-dark .ant-layout-sider-has-trigger {
+}
+.ant-layout-sider-children {
+  background: rgb(165, 110, 135);
+}
+
+.ant-menu-item {
+  background: rgb(161, 17, 34);
+}
+
+.ant-menu-submenu-title {
+  background: rgb(161, 17, 34);
+}
+
+.ant-layout-sider .ant-layout-sider-dark .ant-layout-sider-has-trigger {
+  background: rgb(165, 110, 135);
+}
+
+.ant-menu.ant-menu-dark .ant-menu-item-selected,
+.ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected {
+  background-color: rgb(165, 110, 135);
+}
+
+.ant-layout-sider-trigger {
+  position: fixed;
+  text-align: center;
+  bottom: 0;
+  cursor: pointer;
+  height: 48px;
+  line-height: 48px;
+  color: #fff;
+  /* background: #002140; */
+  z-index: 1;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.ant-layout-sider .ant-layout-sider-dark .ant-layout-sider-has-trigger {
+  background: rgb(161, 17, 34);
+}
+
+.ant-menu.ant-menu-dark .ant-menu-item-selected,
+.ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected {
+  background: rgb(165, 110, 135);
+}
+
+.ant-menu.ant-menu-dark .ant-menu-item-selected,
+.ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected {
+  background: rgb(161, 17, 34) !important;
+}

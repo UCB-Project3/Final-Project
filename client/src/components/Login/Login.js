@@ -15,22 +15,28 @@ import {
 
 const logindivStyle = {
   width: "270px",
+  height: "520px",
   margin: "100px 0 8px 550px",
   // border: "5px solid pink",
   content: "center"
 };
-
+/* google sign in button  style */
 const imgdivStyle = {
   height: " 40px",
   width: "140px",
   background: "white",
   color: " #737373",
-  margin: "20px 0 120px 50px",
+  margin: "20px 0 50px 50px",
   content: "center"
 };
-
+/* login button  style */
 const loginbuttondivStyle = {
-  margin: "20px 0 20px 75px",
+  margin: "20px 0 30px 75px",
+  content: "center"
+};
+/* signup here style */
+const signuphereAtagStyle = {
+  margin: "10px 0 200px 0",
   content: "center"
 };
 class Login extends Component {
@@ -107,6 +113,19 @@ class Login extends Component {
                   className="googlebutton"
                 />
               </a>
+
+              <div class="col-xs-12 text-center login-actions">
+                <span className="text-block bold">Don't have a profile?</span>
+                <div className="signupnext">
+                  <a
+                    className="link-color-alt-grey"
+                    href="/signup"
+                    style={signuphereAtagStyle}
+                  >
+                    Sign up here
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>

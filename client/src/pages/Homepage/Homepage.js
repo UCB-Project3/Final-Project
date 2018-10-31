@@ -1,29 +1,16 @@
 import React, { Component } from "react";
 import { Priceslider } from "../../components/slider/Priceslider";
-import {
-  Button,
-  Card,
-  Input,
-  Preloader,
-  Icon,
-  Footer,
-  Table,
-  thead,
-  th,
-  tr,
-  tbody
-} from "react-materialize";
-import ReactDOM from "react-dom";
-import Jumbotron from "../../components/Jumbotron";
+import { Button, Card } from "react-materialize";
+
 import Banner from "../../components/Banner";
 import Nav from "../../components/Nav";
 import SearchResult from "../../components/SearchResult";
 //import DeleteBtn from "../../components/DeleteBtn";
 //import API from "../../utils/API";
-import { Col, Row, Container } from "../../components/Grid";
+
 //import { List } from "../../components/List";
 import "./Homepage.css";
-import { Slider, InputNumber } from "antd";
+// import { Slider, InputNumber } from "antd";
 
 class Homepage extends Component {
   state = {
@@ -188,7 +175,9 @@ class Homepage extends Component {
       <div>
         <div className="row clearfix">
           <div className="col-md-12 column">
-            <Banner />
+            <div className="bannerbannerdiv">
+              <Banner />
+            </div>
           </div>
           <div className="position-data">
             <div className="First">
