@@ -79,7 +79,7 @@ class App extends Component {
 
   searchPage = () => {
     if (this.state.toSearch) {
-      return <Redirect to="/search" />;
+      return <Redirect to="/" />;
     }
   };
 
@@ -96,16 +96,16 @@ class App extends Component {
           />
           {this.searchPage()}
           <Switch>
-            <Route exact path="/" component={Homepage} />
+            <Route exact path="/" component={() => <Homepage searchResults={this.state.results} />} />
             <Route exact path="/login" component={LoginPage} />
             <Route exact path="/wishlist" component={WishlistPage} />
             <Route exact path="/signup" component={SignUpPage} />
             {/* <Route exact path="/search" component={Search} searchResults={this.state.searchResults} /> */}
-            <Route
+            {/* <Route
               exact
               path="/search"
               component={() => <Search searchResults={this.state.results} />}
-            />
+            /> */}
             <Route exact path="/profile" component={Profile} />
           </Switch>
           <MainFooter />

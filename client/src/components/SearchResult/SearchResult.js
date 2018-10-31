@@ -24,8 +24,8 @@ const SearchResult = props => (
                 style={{ flex: "1 1 auto", marginLeft: 5 }}
             >
                 <div className="brandName">{props.brandname ? props.brandname[0].toUpperCase() + props.brandname.slice(1) : ""}</div>
-                <div className="productRating">{props.rating}</div>
-                <div className="price">{(props.priceSign ? props.priceSign : "$") + (props.price.split('.')[1].length > 1 ? props.price : props.price + "0")}</div>
+                <div className="productRating">{props.rating ? props.rating : ""}</div>
+                <div className="price">{(props.priceSign ? props.priceSign : "$") + (props.price ? (props.price.split('.')[1].length > 1 ? props.price : props.price + "0") : "5.00")}</div>
 
             </div>
         </div>

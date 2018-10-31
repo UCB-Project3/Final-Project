@@ -16,7 +16,7 @@ class Search extends Component {
                     </div>
                 </div>
 
-                {this.props.searchResults.map(result => (
+                {this.props.searchResults.length > 0 ? this.props.searchResults.map(result => (
                     <SearchResult
                         image={result.image_link}
                         brandname={result.brand}
@@ -26,7 +26,7 @@ class Search extends Component {
                         key={result.image}
                         priceSign={result.priceSign}
                     />
-                ))
+                )) : <div>No results found!</div>
                 }
             </Wrapper>
         );
