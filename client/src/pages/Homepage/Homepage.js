@@ -179,7 +179,7 @@ class Homepage extends Component {
               <Banner />
             </div>
           </div>
-          <div className="position-data">
+          <div className="col-md-12 position-data">
             <div className="First">
               Filter By :
               <div className="Filter-ByBrand">
