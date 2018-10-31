@@ -12,8 +12,10 @@ import {
 import Login from "../../components/Login/Login";
 
 class LoginPage extends Component {
+
+
   render() {
-    return <Login />;
+    return <Login _login={this.handleSubmit}  />;
   }
 }
 

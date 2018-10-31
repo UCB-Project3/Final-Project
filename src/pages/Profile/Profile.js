@@ -1,18 +1,12 @@
 import React, { Component } from "react";
 import "./Profile.css";
 import Banner from "../../components/Banner";
-import {
-  Button,
-  Card,
-  Col,
-  Input,
-  Preloader,
-  Row,
-  Icon
-} from "react-materialize";
-import ReactDOM from "react-dom";
+
 
 class Profile extends Component {
+  componentDidMount(){
+    console.log(this.state);
+  }
   render() {
     return (
       <div>

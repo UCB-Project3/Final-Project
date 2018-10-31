@@ -1,31 +1,10 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
-// import googleButton from './google_signin_buttons/web/1x/btn_google_signin_dark_disabled_web.png'
-import googleButton from "./google_signin_buttons/web/1x/btn_google_signin_dark_normal_web.png";
-
-import {
-  Button,
-  Card,
-  Col,
-  Input,
-  Preloader,
-  Row,
-  Icon
-} from "react-materialize";
 
 const logindivStyle = {
   width: "270px",
   margin: "100px 0 8px 550px",
   // border: "5px solid pink",
-  content: "center"
-};
-
-const imgdivStyle = {
-  height: " 40px",
-  width: "140px",
-  background: "white",
-  color: " #737373",
-  margin: "20px 0 120px 50px",
   content: "center"
 };
 
@@ -40,6 +19,7 @@ class Login extends Component {
       username: "",
       password: "",
       redirectTo: null
+
     };
     // this.googleSignin = this.googleSignin.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -98,15 +78,7 @@ class Login extends Component {
                   </div>
                 </div>
               </div>
-              <a href="/auth/google">
-                {/* <GoogleButton /> */}
-                <img
-                  src={googleButton}
-                  style={imgdivStyle}
-                  alt="sign into Google Button"
-                  className="googlebutton"
-                />
-              </a>
+           
             </div>
           </div>
         </div>

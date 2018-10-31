@@ -33,8 +33,10 @@ router.post(
 	passport.authenticate('local'),
 	(req, res) => {
 		console.log('POST to /login')
-		const user = JSON.parse(JSON.stringify(req.user)) // hack
+		const user = JSON.parse(JSON.stringify(req.body)) 
+		console.log('user', user);// hack
 		const cleanUser = Object.assign({}, user)
+		console.log('clean:', cleanUser);
 		if (cleanUser.local) {
 			console.log(`Deleting ${cleanUser.local.password}`)
 			delete cleanUser.local.password

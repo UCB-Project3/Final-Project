@@ -2,24 +2,9 @@ import React, { Component } from "react";
 import { Priceslider } from "../../components/slider/Priceslider";
 import {
   Button,
-  Card,
-  Input,
-  Preloader,
-  Icon,
-  Footer,
-  Table,
-  thead,
-  th,
-  tr,
-  tbody
+  Card
 } from "react-materialize";
-import ReactDOM from "react-dom";
-import Jumbotron from "../../components/Jumbotron";
 import Banner from "../../components/Banner";
-import Nav from "../../components/Nav";
-//import DeleteBtn from "../../components/DeleteBtn";
-//import API from "../../utils/API";
-import { Col, Row, Container } from "../../components/Grid";
 //import { List } from "../../components/List";
 import "./Homepage.css";
 import { Slider, InputNumber } from "antd";
@@ -159,21 +144,21 @@ class Homepage extends Component {
               </div>
             </div>
             <div className="second">
-              <Card>
+              {/* <Card>
                 <div className="card-content" style={{ display: "flex" }}>
-                  <img
+                 {/* <img
                     src="https://images.vivino.com/thumbs/tG6qBPJLQY-5x6s8P1pIYQ_pb_x300.png"
                     className="img-thumbnail"
                     alt="wine"
                     style={{ flex: 0 }}
-                  />
-                  <span className="card-body" style={{ flex: "1 1 auto" }}>
+                  />  */}
+                  {/* <span className="card-body">
                     <p>Title goes here</p>
                     <p>Body goes here</p>
-                  </span>
+                  </span> 
                 </div>
-              </Card>
-              {/*Button for Table here*/}
+              </Card> */}
+
             </div>
           </div>
         </div>
