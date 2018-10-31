@@ -130,8 +130,9 @@ class Homepage extends Component {
   renderSearchResults = () => {
     const activatedBtns = this.state.buttons.filter(btn => btn.checked);
 
+    let trueResults = [];
+
     if (this.props.searchResults.length > 0 && activatedBtns.length > 0) {
-      let trueResults = [];
 
       activatedBtns.forEach(brandBtn => {
         if (brandBtn.checked) {
@@ -140,32 +141,29 @@ class Homepage extends Component {
         }
       })
 
-      return trueResults.map(result => (
-        <SearchResult
-          image={result.image_link}
-          brandname={result.brand}
-          productname={result.name}
-          rating={result.rating}
-          price={result.price}
-          key={result.image}
-          priceSign={result.priceSign}
-        />
-      ))
     } else if (this.props.searchResults.length > 0) {
-      return this.props.searchResults.map(result => (
-        <SearchResult
-          image={result.image_link}
-          brandname={result.brand}
-          productname={result.name}
-          rating={result.rating}
-          price={result.price}
-          key={result.image}
-          priceSign={result.priceSign}
-        />
-      ))
+
+      trueResults = this.props.searchResults.slice(0);
+
     } else {
       return (<div>No results found!</div>);
     }
+
+    if (this.state.price > 0) {
+      trueResults = trueResults.filter(result => result.price ? result.price < this.state.price : false);
+    }
+
+    return trueResults.map(result => (
+      <SearchResult
+        image={result.image_link}
+        brandname={result.brand}
+        productname={result.name}
+        rating={result.rating}
+        price={result.price}
+        key={result.image}
+        priceSign={result.priceSign}
+      />
+    ))
   }
 
   render() {
