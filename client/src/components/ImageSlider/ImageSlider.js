@@ -137,8 +137,8 @@ export default class CustomArrows extends Component {
     };
     return (
       <div>
-        <div className="firstrow" style={{ margin: "300px 0 0 0" }}>
-          <h5>Similar products </h5>
+        <div className="firstrow" style={{ margin: "0 0 0 0" }}>
+          <h5>You Viewed </h5>
           <Slider {...settings}>
             <div className="FirstCard" style={{ width: " 18rem" }}>
               <img
@@ -308,137 +308,117 @@ export default class CustomArrows extends Component {
               </div>
             </div>
             <div>
-              <div className="SecondCard2">
-                <div className="card-content" style={{ display: "flex" }}>
-                  <img
-                    src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample87.jpg"
-                    className="img-thumbnail"
-                    alt=" image1"
-                    // width="25"
-                    // height="100"
-                    style={{ flex: 0 }}
-                  />
+              <img
+                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample87.jpg"
+                className="img-thumbnail"
+                alt=" image1"
+                // width="25"
+                // height="100"
+                style={{ flex: 0 }}
+              />
 
-                  <div className="ItemsCard">
-                    <span className="Product_item_">
-                      <a href="#" className="title">
-                        Title
-                      </a>
-                    </span>
-                    <div className="Product_Brand_Card">
-                      <a href="#" className="ttt">
-                        Some quick example text
-                      </a>
-                    </div>
-                  </div>
+              <div className="ItemsCard">
+                <span className="Product_item_">
+                  <a href="#" className="title">
+                    Title
+                  </a>
+                </span>
+                <div className="Product_Brand_Card">
+                  <a href="#" className="ttt">
+                    Some quick example text
+                  </a>
                 </div>
               </div>
             </div>
             <div>
-              <div className="ThirdCard2">
-                <div className="card-content" style={{ display: "flex" }}>
-                  <img
-                    src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample87.jpg"
-                    className="img-thumbnail"
-                    alt=" image1"
-                    // width="25"
-                    // height="100"
-                    style={{ flex: 0 }}
-                  />
+              <img
+                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample87.jpg"
+                className="img-thumbnail"
+                alt=" image1"
+                // width="25"
+                // height="100"
+                style={{ flex: 0 }}
+              />
 
-                  <div className="ItemsCard">
-                    <span className="Product_item_">
-                      <a href="#" className="title">
-                        Title
-                      </a>
-                    </span>
-                    <div className="Product_Brand_Card">
-                      <a href="#" className="ttt">
-                        Some quick example text
-                      </a>
-                    </div>
-                  </div>
+              <div className="ItemsCard">
+                <span className="Product_item_">
+                  <a href="#" className="title">
+                    Title
+                  </a>
+                </span>
+                <div className="Product_Brand_Card">
+                  <a href="#" className="ttt">
+                    Some quick example text
+                  </a>
                 </div>
               </div>
             </div>
             <div>
-              <div className="ForthCard2">
-                <div className="card-content" style={{ display: "flex" }}>
-                  <img
-                    src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample87.jpg"
-                    className="img-thumbnail"
-                    alt=" image1"
-                    // width="25"
-                    // height="100"
-                    style={{ flex: 0 }}
-                  />
+              <img
+                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample87.jpg"
+                className="img-thumbnail"
+                alt=" image1"
+                // width="25"
+                // height="100"
+                style={{ flex: 0 }}
+              />
 
-                  <div className="ItemsCard">
-                    <span className="Product_item_">
-                      <a href="#" className="title">
-                        Title
-                      </a>
-                    </span>
-                    <div className="Product_Brand_Card">
-                      <a href="#" className="ttt">
-                        Some quick example text
-                      </a>
-                    </div>
-                  </div>
+              <div className="ItemsCard">
+                <span className="Product_item_">
+                  <a href="#" className="title">
+                    Title
+                  </a>
+                </span>
+                <div className="Product_Brand_Card">
+                  <a href="#" className="ttt">
+                    Some quick example text
+                  </a>
                 </div>
               </div>
             </div>
             <div>
-              <div className="Fifthcard2">
-                <div className="card-content" style={{ display: "flex" }}>
-                  <img
-                    src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample87.jpg"
-                    className="img-thumbnail"
-                    alt=" image1"
-                    // width="25"
-                    // height="100"
-                    style={{ flex: 0 }}
-                  />
+              <img
+                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample87.jpg"
+                className="img-thumbnail"
+                alt=" image1"
+                // width="25"
+                // height="100"
+                style={{ flex: 0 }}
+              />
 
-                  <div className="ItemsCard">
-                    <span className="Product_item_">
-                      <a href="#" className="title">
-                        Title
-                      </a>
-                    </span>
-                    <div className="Product_Brand_Card">
-                      <a href="#" className="ttt">
-                        Some quick example text
-                      </a>
-                    </div>
-                  </div>
+              <div className="ItemsCard">
+                <span className="Product_item_">
+                  <a href="#" className="title">
+                    Title
+                  </a>
+                </span>
+                <div className="Product_Brand_Card">
+                  <a href="#" className="ttt">
+                    Some quick example text
+                  </a>
                 </div>
               </div>
             </div>
             <div>
-              <div className="SixthCard2">
-                <div className="card-content" style={{ display: "flex" }}>
-                  <img
-                    src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample87.jpg"
-                    className="img-thumbnail"
-                    alt=" image1"
-                    // width="25"
-                    // height="100"
-                    style={{ flex: 0 }}
-                  />
+              <img
+                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample87.jpg"
+                className="img-thumbnail"
+                alt=" image1"
+                // width="25"
+                // height="100"
+                style={{ flex: 0 }}
+              />
 
-                  <div className="ItemsCard">
-                    <span className="Product_item_">
-                      <a href="#" className="title">
-                        Title
-                      </a>
-                    </span>
-                    <div className="Product_Brand_Card">
-                      <a href="#" className="ttt">
-                        Some quick example text
-                      </a>
-                    </div>
-                  </div>
+              <div className="ItemsCard">
+                <span className="Product_item_">
+                  <a href="#" className="title">
+                    Title
+                  </a>
+                </span>
+                <div className="Product_Brand_Card">
+                  <a href="#" className="ttt">
+                    Some quick example text
+                  </a>
                 </div>
               </div>
             </div>

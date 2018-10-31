@@ -17,16 +17,7 @@ class WishlistPage extends Component {
             </div>
           </div>
           <div className="position-data">
-            <div className="First">
-              Filter By :
-              <div className="Filter-ByBrand">
-                {/* Brand :<div style={{}}>{this.displayButtons()}</div> */}
-              </div>
-              <div className="Filter-Byprice">
-                <p> Price Range </p>
-                <div />
-              </div>
-            </div>
+            <div className="First" />
             <div className="second">
               <Card>
                 <div className="card-content" style={{ display: "flex" }}>
