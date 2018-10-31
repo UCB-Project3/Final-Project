@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./Profile.css";
 import MainFooter from "../../components/Footer";
 import Banner from "../../components/Banner";
@@ -64,9 +65,7 @@ class Profile extends Component {
               >
                 <Menu.Item key="3">
                   <span className="Product_item_">
-                    <a href="#" className="title">
-                      Wish List
-                    </a>
+                    <Link to="/wishlist">Wish List</Link>
                   </span>
                 </Menu.Item>
                 {/* <Menu.Item key="4">Bill</Menu.Item>

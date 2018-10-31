@@ -29,7 +29,8 @@ class App extends Component {
   state = {
     searchTerm: "",
     results: [],
-    toSearch: false
+    toSearch: false,
+    loggedIn: false
   };
 
   searchJSON = () => {
@@ -91,6 +92,7 @@ class App extends Component {
             handleFormSubmit={this.handleFormSubmit}
             searchTerm={this.state.searchTerm}
             toSearchState={this.toSearchState}
+            loggedIn={this.state.loggedIn}
           />
           {this.searchPage()}
           <Switch>
