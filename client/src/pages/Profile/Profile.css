@@ -1,1 +1,10 @@
-
+#darkenprofile {
+  width: 1000px;
+}
+.profilemaincontent {
+  max-width: 500px;
+  height: 1200px;
+  margin: auto;
+  background: white;
+  padding: 10px;
+}

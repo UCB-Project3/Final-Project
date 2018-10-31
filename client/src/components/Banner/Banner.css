@@ -1,6 +1,7 @@
 .welcome-premium-banner {
   background: url("/assets/img/Welcomepic.jpg") no-repeat;
-  height: 150px;
+  height: 300px;
+  background-size: 100vw 100%;
 }
 .welcome-premium-banner__header {
   color: white;

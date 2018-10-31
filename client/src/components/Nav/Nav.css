@@ -11,6 +11,7 @@
 
 .navbarpatition {
   min-height: 70px;
+  box-shadow: 0 6px 15px 3px rgba(50, 50, 50, 0.15);
 }
 
 /*
@@ -52,7 +53,7 @@
 
 .dropdownmakeupdiv {
   top: 20px;
-  margin-left: 50px;
+  margin-left: 70px;
   float: left;
 }
 
@@ -82,7 +83,7 @@
   float: right;
   width: 30px;
   height: 40px;
-  margin-right: 10px;
+  margin-right: 25px;
   margin-top: 20px;
 
   position: relative;
@@ -101,8 +102,23 @@
   float: right;
   width: 30px;
   height: 40px;
-  margin-right: 50px;
-  margin-top: 20px;
+  margin-right: 70px;
+  margin-top: 30px;
 
   position: relative;
+}
+
+.signupbutton {
+  /*border: 2px solid peru; */
+  float: right;
+  width: 60px;
+  height: 40px;
+  margin-right: 5px;
+  margin-top: 30px;
+
+  position: relative;
+}
+
+.signinfeature {
+  color: gray;
 }
