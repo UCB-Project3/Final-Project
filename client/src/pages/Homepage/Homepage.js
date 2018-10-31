@@ -17,6 +17,7 @@ import ReactDOM from "react-dom";
 import Jumbotron from "../../components/Jumbotron";
 import Banner from "../../components/Banner";
 import Nav from "../../components/Nav";
+import SearchResult from "../../components/SearchResult";
 //import DeleteBtn from "../../components/DeleteBtn";
 //import API from "../../utils/API";
 import { Col, Row, Container } from "../../components/Grid";
@@ -72,6 +73,7 @@ class Homepage extends Component {
       }
     ]
   };
+
 
   handleChange = idx => e => {
     const { name, value } = e.target;
@@ -138,7 +140,50 @@ class Homepage extends Component {
     ));
   };
 
+  renderSearchResults = () => {
+    const activatedBtns = this.state.buttons.filter(btn => btn.checked);
+
+    if (this.props.searchResults.length > 0 && activatedBtns.length > 0) {
+      let trueResults = [];
+
+      activatedBtns.forEach(brandBtn => {
+        if (brandBtn.checked) {
+          let tempResults = this.props.searchResults.filter(result => result.brand ? result.brand.toLowerCase().indexOf(brandBtn.name) > -1 : false);
+          trueResults = trueResults.concat(tempResults);
+        }
+      })
+
+      return trueResults.map(result => (
+        <SearchResult
+          image={result.image_link}
+          brandname={result.brand}
+          productname={result.name}
+          rating={result.rating}
+          price={result.price}
+          key={result.image}
+          priceSign={result.priceSign}
+        />
+      ))
+    } else if (this.props.searchResults.length > 0) {
+      return this.props.searchResults.map(result => (
+        <SearchResult
+          image={result.image_link}
+          brandname={result.brand}
+          productname={result.name}
+          rating={result.rating}
+          price={result.price}
+          key={result.image}
+          priceSign={result.priceSign}
+        />
+      ))
+    } else {
+      return (<div>No results found!</div>);
+    }
+  }
+
   render() {
+
+
     return (
       <div>
         <div className="row clearfix">
@@ -159,7 +204,20 @@ class Homepage extends Component {
               </div>
             </div>
             <div className="second">
-              <Card>
+              {/*this.props.searchResults.length > 0 ? this.props.searchResults.map(result => (
+                <SearchResult
+                  image={result.image_link}
+                  brandname={result.brand}
+                  productname={result.name}
+                  rating={result.rating}
+                  price={result.price}
+                  key={result.image}
+                  priceSign={result.priceSign}
+                />
+              )) : <div>No results found!</div>*/
+              }
+              {this.renderSearchResults()}
+              {/* <Card>
                 <div className="card-content" style={{ display: "flex" }}>
                   <img
                     src="https://images.vivino.com/thumbs/tG6qBPJLQY-5x6s8P1pIYQ_pb_x300.png"
@@ -172,7 +230,7 @@ class Homepage extends Component {
                     <p>Body goes here</p>
                   </span>
                 </div>
-              </Card>
+              </Card> */}
               {/*Button for Table here*/}
             </div>
           </div>
