@@ -9,6 +9,7 @@ import "./Nav.css";
 import products from "../../data/products.json";
 import Userdropmenu from "../Userdropmenu/Userdropmenu";
 import Cascadingmenu from "../Cascadingmenu/Cascadingmenu";
+import logo from './logo.png';
 
 // const Logo = (
 //   <div>
@@ -85,7 +86,7 @@ class Nav extends Component {
     return (
       <div>
         <div className="navbarpatition">
-          <div className="logodiv">MarkUp</div>
+          <div className="logodiv"><img src={logo} className='logo' /></div>
 
           <div className="dropdownmakeupdiv">{/*  <Makeup />*/}</div>
           <div className="dropdownnewdiv">
