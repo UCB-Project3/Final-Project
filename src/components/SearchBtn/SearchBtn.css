@@ -36,11 +36,13 @@
 
 .searchBar_input.searchBar_searchTerm {
   position: absolute;
-  left: 33px;
-  top: 0;
-  width: 210px !important;
+  left: 17px;
+  top: 14px;
+  width: 220px !important;
   border: none !important;
+  -webkit-box-shadow: none !important;
   box-shadow: none !important;
+  background-color: #f2f2f2;
 }
 
 /* search form */
@@ -64,3 +66,4 @@
   filter: Alpha(Opacity=50);
   opacity: 0.5;
 }
+ 

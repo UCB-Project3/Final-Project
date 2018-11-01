@@ -1,14 +1,18 @@
 .welcome-premium-banner {
-  background: url("/assets/img/Welcomepic.jpg") no-repeat;
+  background: url("/assets/img/premiumWelcome1.jpg") no-repeat;
+  /* background: url("/assets/img/Welcomeimg.jpg") no-repeat; */
   height: 300px;
   background-size: 100vw 100%;
 }
 .welcome-premium-banner__header {
-  color: white;
+  color: balck;
   margin-left: 400px;
-  font-weight: 900;
-  text-shadow: 1px 1px 0px rgba(100, 95, 95, 0.8), 3px 3px 3px black;
-  font-size: 30px;
+  font-family: Comic;
+  font-weight: 2000px;
+  /* background-color: rgb(165, 110, 135); */
+  /* text-shadow: 1px 1px 0px rgb(165, 110, 135), 3px 3px 3px black; */
+  font-size: 22px;
   position: relative;
-  top: 50px;
+  top: 220px;
+  left: 180px;
 }

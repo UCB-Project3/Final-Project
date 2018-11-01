@@ -9,6 +9,20 @@ import "./Nav.css";
 import products from "../../data/products.json";
 import Userdropmenu from "../Userdropmenu/Userdropmenu";
 import Cascadingmenu from "../Cascadingmenu/Cascadingmenu";
+import logo from './logo.png';
+
+// const Logo = (
+//   <div>
+//     <img
+//       src="/assets/img/Logo"
+//       alt="logo"
+//       width="60"
+//       height="60"
+//       className="logo-img"
+//     />
+//     <span className="app-name">Mark Up</span>
+//   </div>
+// );
 
 class Nav extends Component {
   render() {
@@ -72,7 +86,7 @@ class Nav extends Component {
     return (
       <div>
         <div className="navbarpatition">
-          <div className="logodiv">MarkUp</div>
+          <div className="logodiv"><img src={logo} className='logo' /></div>
 
           <div className="dropdownmakeupdiv">{/*  <Makeup />*/}</div>
           <div className="dropdownnewdiv">
@@ -94,19 +108,24 @@ class Nav extends Component {
           <div className="shopicon">
             <i className="fas fa-shopping-cart" />
           </div>
-          <div className="signupbutton ">
-            <a href="/login" className="signinfeature">
-              Sign In
-            </a>
-          </div>
-          <div className="dropdownicon">
-            <Cascadingmenu menuName="" menuElements={ProfileMenu} />
-            {/* <Userdropmenu />*/}
-          </div>
-
-          <div className="avatarpic" size="2x">
-            <Avatarpic />
-          </div>
+          {!this.props.loggedIn && (
+            <div>
+              <div className="signupbutton ">
+                <a href="/login" className="signinfeature">
+                  Sign In
+                </a>
+              </div>
+            </div>
+          )}
+          {this.props.loggedIn && (
+            <div className="avatarpic" size="2x">
+              <Avatarpic />
+              <div className="dropdownicon">
+                <Cascadingmenu menuName="" menuElements={ProfileMenu} />
+                {/* <Userdropmenu />*/}
+              </div>
+            </div>
+          )}
         </div>
       </div>
     );

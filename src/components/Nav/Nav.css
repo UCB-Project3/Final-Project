@@ -5,120 +5,129 @@
   }
   */
 
-.navigation-container {
-  display: flex;
-}
-
-.navbarpatition {
-  min-height: 70px;
-  box-shadow: 0 6px 15px 3px rgba(50, 50, 50, 0.15);
-}
-
-/*
-.navbar-brand {
-  border: 2px solid peru;
-}
-*/
-
-.navbar {
-  background-color: white;
-  margin-top: 2px;
-
-  margin-right: 10px;
-  border-width: 3;
-  border-style: solid;
-  float: center;
-  padding-left: 70 px;
-  height: 100px;
-}
-
-.srchdiv {
-  width: 257px;
-  margin-left: 100px;
-  float: left;
-  margin-top: 12px;
-}
-
-.dropdownnewdiv {
-  top: 20px;
-  margin-left: 1px;
-  float: left;
-}
-
-.dropdownofferdiv {
-  top: 20px;
-  margin-left: 10px;
-  float: left;
-}
-
-.dropdownmakeupdiv {
-  top: 20px;
-  margin-left: 70px;
-  float: left;
-}
-
-.logodiv {
-  margin-left: 10px;
-  text-align: center;
-
-  text-shadow: -1px -1px 0px rgba(255, 255, 255, 0.3),
-    1px 1px 0px rgba(0, 0, 0, 0.8);
-  color: rgb(77, 70, 70);
-  opacity: 0.4;
-  font: 700 50px "Bitter";
-  float: left;
-  color: rgb(60, 2, 107);
-}
-
-.fa-chevron-down {
-  color: gray;
-  position: absolute;
-  top: 25px;
-  left: 5px;
-  size: 2x;
-}
-
-.dropdownicon {
-  /*border: 2px solid peru; */
-  float: right;
-  width: 30px;
-  height: 40px;
-  margin-right: 25px;
-  margin-top: 20px;
-
-  position: relative;
-}
-
-.ant-dropdown-link {
-  color: gray;
-
-  top: 25px;
-
-  size: 9x;
-}
-
-.shopicon {
-  /* border: 2px solid peru; */
-  float: right;
-  width: 30px;
-  height: 40px;
-  margin-right: 70px;
-  margin-top: 30px;
-
-  position: relative;
-}
-
-.signupbutton {
-  /*border: 2px solid peru; */
-  float: right;
-  width: 60px;
-  height: 40px;
-  margin-right: 5px;
-  margin-top: 30px;
-
-  position: relative;
-}
-
-.signinfeature {
-  color: gray;
-}
+  .navigation-container {
+    display: flex;
+  }
+  
+  
+  
+  .navbarpatition {
+    min-height: 70px;
+    box-shadow: 0 6px 15px 3px rgba(50, 50, 50, 0.15);
+  }
+  
+  /*
+  .navbar-brand {
+    border: 2px solid peru;
+  }
+  */
+  
+  .navbar {
+    background-color: white;
+    margin-top: 2px;
+  
+    margin-right: 10px;
+    border-width: 3;
+    border-style: solid;
+    float: center;
+    padding-left: 70 px;
+    height: 100px;
+  }
+  
+  .srchdiv {
+    width: 257px;
+    margin-left: 100px;
+    float: left;
+    margin-top: 12px;
+  }
+  
+  .dropdownnewdiv {
+    top: 20px;
+    margin-left: 1px;
+    float: left;
+  }
+  
+  .dropdownofferdiv {
+    top: 20px;
+    margin-left: 10px;
+    float: left;
+  }
+  
+  .dropdownmakeupdiv {
+    top: 20px;
+    margin-left: 70px;
+    float: left;
+  }
+  
+  .logo {
+    height: 80px;
+    width: 80px;
+  }
+  .logodiv {
+    margin-top: -5px;
+    /* margin-left: 10px; */
+    text-align: center;
+  
+    /* text-shadow: -1px -1px 0px rgba(255, 255, 255, 0.3),
+      1px 1px 0px rgba(0, 0, 0, 0.8); */
+    color: rgb(77, 70, 70);
+    /* opacity: 0.4; */
+  
+    font: 700 25px "Bitter";
+    float: left;
+    color: rgb(60, 2, 107);
+  }
+  
+  .fa-chevron-down {
+    color: gray;
+    position: absolute;
+    top: 25px;
+    left: 5px;
+    size: 2x;
+  }
+  
+  .dropdownicon {
+    /*border: 2px solid peru; */
+    float: right;
+    width: 30px;
+    height: 40px;
+    margin-right: 25px;
+    margin-top: 20px;
+  
+    position: relative;
+  }
+  
+  .ant-dropdown-link {
+    color: gray;
+  
+    top: 25px;
+  
+    size: 9x;
+  }
+  
+  .shopicon {
+    /* border: 2px solid peru; */
+    float: right;
+    width: 30px;
+    height: 40px;
+    margin-right: 70px;
+    margin-top: 30px;
+  
+    position: relative;
+  }
+  
+  .signupbutton {
+    /*border: 2px solid peru; */
+    float: right;
+    width: 60px;
+    height: 40px;
+    margin-right: 5px;
+    margin-top: 30px;
+  
+    position: relative;
+  }
+  
+  .signinfeature {
+    color: gray;
+  }
+  

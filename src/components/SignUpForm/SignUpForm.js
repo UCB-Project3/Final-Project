@@ -2,15 +2,8 @@ import React, { Component } from "react";
 import "./SignUpForm.css";
 import axios from "axios";
 import { Redirect } from "react-router-dom";
-import {
-  Button,
-  Card,
-  Col,
-  Input,
-  Preloader,
-  Row,
-  Icon
-} from "react-materialize";
+
+
 
 const signupdivStyle = {
   width: "270px",

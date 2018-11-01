@@ -1,18 +1,22 @@
 import React, { Component } from "react";
 import { Priceslider } from "../../components/slider/Priceslider";
-import {
-  Button,
-  Card
-} from "react-materialize";
+import { Button, Card } from "react-materialize";
+
 import Banner from "../../components/Banner";
+// import Nav from "../../components/Nav";
+import SearchResult from "../../components/SearchResult";
+//import DeleteBtn from "../../components/DeleteBtn";
+//import API from "../../utils/API";
+
 //import { List } from "../../components/List";
 import "./Homepage.css";
-import { Slider, InputNumber } from "antd";
+// import { Slider, InputNumber } from "antd";
 
 class Homepage extends Component {
   state = {
     rows: [{}],
     price: 0,
+    btnName:"",
     buttons: [
       {
         name: "clinique",
@@ -58,6 +62,7 @@ class Homepage extends Component {
     ]
   };
 
+
   handleChange = idx => e => {
     const { name, value } = e.target;
     const rows = [...this.state.rows];
@@ -90,11 +95,11 @@ class Homepage extends Component {
   };
 
   handleCheckChange = index => {
-    console.log("btn clicked", index);
-    const buttons = this.state.buttons;
-    buttons[index].checked = !this.state.buttons[index].checked;
+    let x = this.state.buttons[index].name
+
+    
     this.setState({
-      buttons
+      btnName: x
     });
   };
   handlePriceChange = price => {
@@ -123,14 +128,48 @@ class Homepage extends Component {
     ));
   };
 
+  renderSearchResults = () => {
+
+         // let tempResults = this.props.searchResults 
+    if (this.props.searchResults.length == 0) {
+     return (<h1> nothing </h1>)
+    }
+        
+    let filterArray = this.props.searchResults
+    if (this.state.btnName !="") {
+      filterArray = this.props.searchResults.filter((e)=>{
+        return e.brand == this.state.btnName
+      })
+
+    }
+   
+    return filterArray.map(result => (
+     
+      
+      <SearchResult
+        image={result.image_link}
+        brandname={result.brand}
+        productname={result.name}
+        rating={result.rating}
+        price={result.price}
+        key={result.id}
+        priceSign={result.priceSign}
+      />
+    ))
+  }
+
   render() {
+
+
     return (
       <div>
         <div className="row clearfix">
           <div className="col-md-12 column">
-            <Banner />
+            <div className="bannerbannerdiv">
+              <Banner />
+            </div>
           </div>
-          <div className="position-data">
+          <div className="col-md-12 position-data">
             <div className="First">
               Filter By :
               <div className="Filter-ByBrand">
@@ -144,21 +183,34 @@ class Homepage extends Component {
               </div>
             </div>
             <div className="second">
+              {/*this.props.searchResults.length > 0 ? this.props.searchResults.map(result => (
+                <SearchResult
+                  image={result.image_link}
+                  brandname={result.brand}
+                  productname={result.name}
+                  rating={result.rating}
+                  price={result.price}
+                  key={result.image}
+                  priceSign={result.priceSign}
+                />
+              )) : <div>No results found!</div>*/
+              }
+              {this.renderSearchResults()}
               {/* <Card>
                 <div className="card-content" style={{ display: "flex" }}>
-                 {/* <img
+                  <img
                     src="https://images.vivino.com/thumbs/tG6qBPJLQY-5x6s8P1pIYQ_pb_x300.png"
                     className="img-thumbnail"
                     alt="wine"
                     style={{ flex: 0 }}
-                  />  */}
-                  {/* <span className="card-body">
+                  />
+                  <span className="card-body" style={{ flex: "1 1 auto" }}>
                     <p>Title goes here</p>
                     <p>Body goes here</p>
-                  </span> 
+                  </span>
                 </div>
               </Card> */}
-
+              {/*Button for Table here*/}
             </div>
           </div>
         </div>
