@@ -64,6 +64,7 @@
 }
 
 .ant-layout-sider .ant-layout-sider-dark .ant-layout-sider-has-trigger {
+  margin-left: -80px;
 }
 .ant-layout-sider-children {
   background: rgb(165, 110, 135);

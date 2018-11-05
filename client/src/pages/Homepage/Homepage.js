@@ -61,7 +61,6 @@ class Homepage extends Component {
     ]
   };
 
-
   handleChange = idx => e => {
     const { name, value } = e.target;
     const rows = [...this.state.rows];
@@ -114,11 +113,11 @@ class Homepage extends Component {
         checked={btn.checked}
         id={index}
         key={index}
-        style={{ margin: 5 }}
+        style={{ margin: 5, borderRadius: 32 }}
         className={
           btn.checked
-            ? "green darken-2 white-text"
-            : "grey lighten-4 black-text"
+            ? "orange darken-1 white-text"
+            : "pink darken-2 black-text"
         }
         onClick={() => this.handleCheckChange(index)}
       >
@@ -133,24 +132,27 @@ class Homepage extends Component {
     let trueResults = [];
 
     if (this.props.searchResults.length > 0 && activatedBtns.length > 0) {
-
       activatedBtns.forEach(brandBtn => {
         if (brandBtn.checked) {
-          let tempResults = this.props.searchResults.filter(result => result.brand ? result.brand.toLowerCase().indexOf(brandBtn.name) > -1 : false);
+          let tempResults = this.props.searchResults.filter(
+            result =>
+              result.brand
+                ? result.brand.toLowerCase().indexOf(brandBtn.name) > -1
+                : false
+          );
           trueResults = trueResults.concat(tempResults);
         }
-      })
-
+      });
     } else if (this.props.searchResults.length > 0) {
-
       trueResults = this.props.searchResults.slice(0);
-
     } else {
-      return (<div>No results found!</div>);
+      return <div>No results found!</div>;
     }
 
     if (this.state.price > 0) {
-      trueResults = trueResults.filter(result => result.price ? result.price < this.state.price : false);
+      trueResults = trueResults.filter(
+        result => (result.price ? result.price < this.state.price : false)
+      );
     }
 
     return trueResults.map(result => (
@@ -163,12 +165,10 @@ class Homepage extends Component {
         key={result.image}
         priceSign={result.priceSign}
       />
-    ))
-  }
+    ));
+  };
 
   render() {
-
-
     return (
       <div>
         <div className="row clearfix">
@@ -179,7 +179,8 @@ class Homepage extends Component {
           </div>
           <div className="col-md-12 position-data">
             <div className="First">
-              Filter By :
+              <p className="filterby"> Filter By :</p>
+
               <div className="Filter-ByBrand">
                 Brand :<div style={{}}>{this.displayButtons()}</div>
               </div>
@@ -201,8 +202,7 @@ class Homepage extends Component {
                   key={result.image}
                   priceSign={result.priceSign}
                 />
-              )) : <div>No results found!</div>*/
-              }
+              )) : <div>No results found!</div>*/}
               {this.renderSearchResults()}
               {/* <Card>
                 <div className="card-content" style={{ display: "flex" }}>
